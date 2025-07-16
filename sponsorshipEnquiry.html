@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Innovation & Transformation Summit</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css.map" />
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/dits.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/bootstrap/css/bootstrap.min.css.map"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style_scss.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- country code  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+    <script src="./assets/js/script.js" defer></script>
+    <script src="./assets/js/jquery.js"></script>
+    <link rel="stylesheet" href="./assets/css/aos.css" />
+    <script src="./assets/js/aos.js"></script>
+    <style>
+      #country option[disabled] {
+        opacity: 0.7; /* Use a lighter color for the text */
+      }
+    </style>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("hO0rGL2q2-CdEsIN5");
+      })();
+    </script>
+  </head>
+  <body>
+    <nav class="nav" style="background-color: #111;">
+      <div class="container" style="display: flex;justify-content: space-between;">
+        <div class="logo">
+          <a href="https://omandits.com"><img src="./assets/images/dits.png" width="60" alt="img" /></a>
+        </div>
+    
+    
+        <div id="mainListDiv" class="main_list" style="border-radius: 20px;">
+          <ul class="navlinks">
+            <li class="navItems"><a href="https://omandits.com">Home</a></li>
+            <li class="navItems"><a href="https://omandits.com">Happenings</a></li>
+            <li class="navItems"><a href="https://omandits.com">Speakers</a></li>
+            <li class="navItems"><a href="https://omandits.com">Sponsors</a></li>
+            <li class="navItems"><a href="https://omandits.com">Partners</a></li>
+            <li class="navItems"><a href="https://omandits.com">Agenda</a></li>
+            <li class="">
+              <a style="margin-right: 1.5rem;" href="./delegateEnquiry.html" class="bt openDelegateBtn">Delegate Enquiry</a>
+            </li>
+            <li class="">
+              <a style="margin-right: 1.5rem;" href="./speakersForm.html" class="bt openSponsorBtn">Speakers
+                Enquiry</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-block d-md-none" style="width: 100px ; height: 100px; position: absolute;top: 0;right: 0;">
+          <span class="navTrigger" onclick="{openClose()}">
+            <i></i>
+            <i></i>
+            <i></i>
+          </span>
+        </div>
+    
+      </div>
+    </nav>
+
+    <section>
+      <div class="container p-4 rounded">
+        <div style="margin-top: 7rem;" class="popup">
+          <h4 class="text-info">SPONSOR ENQUIRY FORM</h4>
+          <div class="row">
+            <div class="col-md-6">
+              <div>
+                <label for="sp_fullname">Full name *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sp_fullname"
+                  name="sp_fullname"
+                  required
+                />
+              </div>
+              <div>
+                <label for="sp_company">Company *</label>
+                <input
+                  style="height: 50px;"
+                  type="text"
+                  class="form-control"
+                  id="sp_company"
+                  name="sp_company"
+                  required
+                />
+              </div>
+              <div>
+                <label for="sp_email">Email *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sp_email"
+                  name="sp_email"
+                  required
+                />
+              </div>
+              <div>
+                <label for="sp_city">City *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sp_city"
+                  name="sp_city"
+                  required
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div>
+                <label for="sp_jbTitle">Job title *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="sp_jbTitle"
+                  name="sp_jbTitle"
+                  required
+                />
+              </div>
+              <div>
+                <label for="sp_mobile">Mobile *</label>
+                <div class="form-control" style="width: 100%;">
+                  <input id="phone" style="border: none;" class="form-control" type="tel" name="phone" placeholder=" " />
+                </div>
+
+                <!-- <input
+                  type="text"
+                  class="form-control"
+                  id="sp_mobile"
+                  name="sp_mobile"
+                  required
+                /> -->
+              </div>
+              <div>
+                <label for="country">Country *</label>
+                <select
+                  id="sp_country"
+                  class="form-control"
+                  name="sp_country"
+                  required
+                >
+                  <option value="" disabled selected>Select a country</option>
+                  <!-- JavaScript will populate this dropdown -->
+                </select>
+              </div>
+              <div>
+                <label for="sp_industry">Industry *</label>
+                <select
+                  id="sp_industry_field"
+                  required=""
+                  class="form-control"
+                  name="sp_industry_field"
+                >
+                  <option disabled="" value="" selected>
+                    Please select a industry type
+                  </option>
+                  <option value="Accounting">Accounting</option>
+                  <option value="Architecture &amp; Planning">
+                    Architecture &amp; Planning
+                  </option>
+                  <option value="Airlines/Aviation">Airlines/Aviation</option>
+                  <option value="Arts and Crafts">Arts and Crafts</option>
+                  <option value="Alternative Dispute Resolution">
+                    Alternative Dispute Resolution
+                  </option>
+                  <option value="Automotive">Automotive</option>
+                  <option value="Alternative Medicine">
+                    Alternative Medicine
+                  </option>
+                  <option value="Aviation &amp; Aerospace">
+                    Aviation &amp; Aerospace
+                  </option>
+                  <option value="Animation">Animation</option>
+                  <option value="Banking">Banking</option>
+                  <option value="Apparel &amp; Fashion">
+                    Apparel &amp; Fashion
+                  </option>
+                  <option value="Biotechnology">Biotechnology</option>
+                  <option value="Broadcast Media">Broadcast Media</option>
+                  <option value="Building Materials">Building Materials</option>
+                  <option value="Business Supplies and Equipment">
+                    Business Supplies and Equipment
+                  </option>
+                  <option value="Capital Markets">Capital Markets</option>
+                  <option value="Chemicals">Chemicals</option>
+                  <option value="Civic &amp; Social Organization">
+                    Civic &amp; Social Organization
+                  </option>
+                  <option value="Civil Engineering">Civil Engineering</option>
+                  <option value="Commercial Real Estate">
+                    Commercial Real Estate
+                  </option>
+                  <option value="Computer &amp; Network Security">
+                    Computer &amp; Network Security
+                  </option>
+                  <option value="Computer Games">Computer Games</option>
+                  <option value="Computer Hardware">Computer Hardware</option>
+                  <option value="Computer Networking">
+                    Computer Networking
+                  </option>
+                  <option value="Computer Software">Computer Software</option>
+                  <option value="Internet">Internet</option>
+                  <option value="Construction">Construction</option>
+                  <option value="Consumer Electronics">
+                    Consumer Electronics
+                  </option>
+                  <option value="Consumer Goods">Consumer Goods</option>
+                  <option value="Consumer Services">Consumer Services</option>
+                  <option value="Cosmetics">Cosmetics</option>
+                  <option value="Dairy">Dairy</option>
+                  <option value="Defense &amp; Space">
+                    Defense &amp; Space
+                  </option>
+                  <option value="Design">Design</option>
+                  <option value="Education Management">
+                    Education Management
+                  </option>
+                  <option value="E-Learning">E-Learning</option>
+                  <option value="Electrical/Electronic Manufacturing">
+                    Electrical/Electronic Manufacturing
+                  </option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="Environmental Services">
+                    Environmental Services
+                  </option>
+                  <option value="Events Services">Events Services</option>
+                  <option value="Executive Office">Executive Office</option>
+                  <option value="Facilities Services">
+                    Facilities Services
+                  </option>
+                  <option value="Farming">Farming</option>
+                  <option value="Financial Services">Financial Services</option>
+                  <option value="Fine Art">Fine Art</option>
+                  <option value="Fishery">Fishery</option>
+                  <option value="Food &amp; Beverages">
+                    Food &amp; Beverages
+                  </option>
+                  <option value="Food Production">Food Production</option>
+                  <option value="Fund-Raising">Fund-Raising</option>
+                  <option value="Furniture">Furniture</option>
+                  <option value="Gambling &amp; Casinos">
+                    Gambling &amp; Casinos
+                  </option>
+                  <option value="Ceramics &amp; Concrete">
+                    Glass, Ceramics &amp; Concrete
+                  </option>
+                  <option value="Government Administration">
+                    Government Administration
+                  </option>
+                  <option value="Government Relations">
+                    Government Relations
+                  </option>
+                  <option value="Graphic Design">Graphic Design</option>
+                  <option value="Wellness and Fitness">
+                    Health, Wellness and Fitness
+                  </option>
+                  <option value="Higher Education">Higher Education</option>
+                  <option value="Hospital &amp; Health Care">
+                    Hospital &amp; Health Care
+                  </option>
+                  <option value="Hospitality">Hospitality</option>
+                  <option value="Human Resources">Human Resources</option>
+                  <option value="Import and Export">Import and Export</option>
+                  <option value="Individual &amp; Family Services">
+                    Individual &amp; Family Services
+                  </option>
+                  <option value="Industrial Automation">
+                    Industrial Automation
+                  </option>
+                  <option value="Information Services">
+                    Information Services
+                  </option>
+                  <option value="Information Technology and Services">
+                    Information Technology and Services
+                  </option>
+                  <option value="Insurance">Insurance</option>
+                  <option value="International Affairs">
+                    International Affairs
+                  </option>
+                  <option value="International Trade and Development">
+                    International Trade and Development
+                  </option>
+                  <option value="Investment Banking">Investment Banking</option>
+                  <option value="Investment Management">
+                    Investment Management
+                  </option>
+                  <option value="Judiciary">Judiciary</option>
+                  <option value="Law Enforcement">Law Enforcement</option>
+                  <option value="Law Practice">Law Practice</option>
+                  <option value="Legal Services">Legal Services</option>
+                  <option value="Legislative Office">Legislative Office</option>
+                  <option value="Travel &amp; Tourism">Leisure</option>
+                  <option value="Libraries">Libraries</option>
+                  <option value="Logistics and Supply Chain">
+                    Logistics and Supply Chain
+                  </option>
+                  <option value="Luxury Goods &amp; Jewelry">
+                    Luxury Goods &amp; Jewelry
+                  </option>
+                  <option value="Machinery">Machinery</option>
+                  <option value="Management Consulting">
+                    Management Consulting
+                  </option>
+                  <option value="Maritime">Maritime</option>
+                  <option value="Market Research">Market Research</option>
+                  <option value="Marketing and Advertising">
+                    Marketing and Advertising
+                  </option>
+                  <option value="Mechanical or Industrial Engineering">
+                    Mechanical or Industrial Engineering
+                  </option>
+                  <option value="Media Production">Media Production</option>
+                  <option value="Medical Devices">Medical Devices</option>
+                  <option value="Medical Practice">Medical Practice</option>
+                  <option value="Mental Health Care">Mental Health Care</option>
+                  <option value="Military">Military</option>
+                  <option value="Mining &amp; Metals">
+                    Mining &amp; Metals
+                  </option>
+                  <option value="Motion Pictures and Film">
+                    Motion Pictures and Film
+                  </option>
+                  <option value="Museums and Institutions">
+                    Museums and Institutions
+                  </option>
+                  <option value="Music">Music</option>
+                  <option value="Nanotechnology">Nanotechnology</option>
+                  <option value="Newspapers">Newspapers</option>
+                  <option value="Nonprofit Organization Management">
+                    Nonprofit Organization Management
+                  </option>
+                  <option value="Oil &amp; Energy">Oil &amp; Energy</option>
+                  <option value="Online Media">Online Media</option>
+                  <option value="Outsourcing/Offshoring">
+                    Outsourcing/Offshoring
+                  </option>
+                  <option value="Package/Freight Delivery">
+                    Package/Freight Delivery
+                  </option>
+                  <option value="Packaging and Containers">
+                    Packaging and Containers
+                  </option>
+                  <option value="Paper &amp; Forest Products">
+                    Paper &amp; Forest Products
+                  </option>
+                  <option value="Performing Arts">Performing Arts</option>
+                  <option value="Pharmaceuticals">Pharmaceuticals</option>
+                  <option value="Philanthropy">Philanthropy</option>
+                  <option value="Photography">Photography</option>
+                  <option value="Plastics">Plastics</option>
+                  <option value="Political Organization">
+                    Political Organization
+                  </option>
+                  <option value="Primary/Secondary Education">
+                    Primary/Secondary Education
+                  </option>
+                  <option value="Printing">Printing</option>
+                  <option value="Professional Training &amp; Coaching">
+                    Professional Training &amp; Coaching
+                  </option>
+                  <option value="Program Development">
+                    Program Development
+                  </option>
+                  <option value="Public Policy">Public Policy</option>
+                  <option value="Public Relations and Communications">
+                    Public Relations and Communications
+                  </option>
+                  <option value="Public Safety">Public Safety</option>
+                  <option value="Publishing">Publishing</option>
+                  <option value="Railroad Manufacture">
+                    Railroad Manufacture
+                  </option>
+                  <option value="Ranching">Ranching</option>
+                  <option value="Real Estate">Real Estate</option>
+                  <option value="Recreational Facilities and Services">
+                    Recreational Facilities and Services
+                  </option>
+                  <option value="Religious Institutions">
+                    Religious Institutions
+                  </option>
+                  <option value="Renewables &amp; Environment">
+                    Renewables &amp; Environment
+                  </option>
+                  <option value="Research">Research</option>
+                  <option value="Restaurants">Restaurants</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Security and Investigations">
+                    Security and Investigations
+                  </option>
+                  <option value="Semiconductors">Semiconductors</option>
+                  <option value="Shipbuilding">Shipbuilding</option>
+                  <option value="Sporting Goods">Sporting Goods</option>
+                  <option value="Sports">Sports</option>
+                  <option value="Staffing and Recruiting">
+                    Staffing and Recruiting
+                  </option>
+                  <option value="Supermarkets">Supermarkets</option>
+                  <option value="Telecommunications">Telecommunications</option>
+                  <option value="Textiles">Textiles</option>
+                  <option value="Think Tanks">Think Tanks</option>
+                  <option value="Tobacco">Tobacco</option>
+                  <option value="Translation and Localization">
+                    Translation and Localization
+                  </option>
+                  <option value="Transportation/Trucking/Railroad">
+                    Transportation/Trucking/Railroad
+                  </option>
+                  <option value="Utilities">Utilities</option>
+                  <option value="Venture Capital &amp; Private Equity">
+                    Venture Capital &amp; Private Equity
+                  </option>
+                  <option value="Veterinary">Veterinary</option>
+                  <option value="Warehousing">Warehousing</option>
+                  <option value="Wholesale">Wholesale</option>
+                  <option value="Wine and Spirits">Wine and Spirits</option>
+                  <option value="Wireless">Wireless</option>
+                  <option value="Writing and Editing">
+                    Writing and Editing
+                  </option>
+                  <option value="FinTech">FinTech</option>
+                  <option value="Blockchain">Blockchain</option>
+                  <option value="ICO/IEO/STO">ICO/IEO/STO</option>
+                  <option value="Mining">Mining</option>
+                  <option value="Others">Others</option>
+                  <option value="Manufacturing">Manufacturing</option>
+                  <option value="E-commerce">E-commerce</option>
+                  <option value="OTT">OTT</option>
+                  <option value="Ed-Tech">Ed-Tech</option>
+                  <option value="Esports">Esports</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row py-4">
+            <div class="col-md-6">
+              <h4 class="text-info">
+                Select your line of business/profession*
+              </h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="lineOfBusiness"
+                      value="Industry expert"
+                    />
+                    Industry expert
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="lineOfBusiness"
+                      value="Startup"
+                    />
+                    Startup
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="lineOfBusiness"
+                      value="Investor"
+                    />
+                    Investor
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="lineOfBusiness"
+                      value="Corporate professional"
+                    />
+                    Corporate professional
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="lineOfBusiness"
+                      value="Government authority"
+                    />
+                    Government authority
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="lineOfBusiness"
+                      value="Others"
+                    />
+                    Others
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="lineOfBusiness"
+                      value="Family Business"
+                    />
+                    Family Business
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h4 class="text-info">I am interested in*</h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="iamInterestedIn"
+                      value="Sponsorship"
+                    />
+                    Sponsorship
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="iamInterestedIn"
+                      value="Speaking"
+                    />
+                    Speaking
+                  </label>
+
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="iamInterestedIn"
+                      value="Booking Exhibition Space"
+                    />
+                    Booking Exhibition Space
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="iamInterestedIn"
+                      value="Media partnership"
+                    />
+                    Media partnership
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="iamInterestedIn"
+                      value="Booking Exhibition Space (Startup)"
+                    />
+                    Booking Exhibition Space (Startup)
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row pb-4">
+            <div class="col-md-6">
+              <h4 class="text-info">
+                Who would you like to meet at the show?*
+              </h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="showMeet"
+                      value="Enterprises"
+                    />
+                    Enterprises
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="showMeet"
+                      value="Governments"
+                    />
+                    Governments
+                  </label>
+                  <br />
+                  <label>
+                    <input type="checkbox" name="showMeet" value="Investors" />
+                    Investors
+                  </label>
+                  <br />
+                  <label>
+                    <input type="checkbox" name="showMeet" value="Startups" />
+                    Startups
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="showMeet"
+                      value="Associations"
+                    />
+                    Associations
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="showMeet"
+                      value="Technology Providers"
+                    />
+                    Technology Providers
+                  </label>
+                  <br />
+                  <label>
+                    <input
+                      type="checkbox"
+                      name="showMeet"
+                      value="Advisors & Partners"
+                    />
+                    Advisors & Partners
+                  </label>
+                  <br />
+                  <label>
+                    <input type="checkbox" name="showMeet" value="Media" />
+                    Media
+                  </label>
+                  <br />
+                  <label>
+                    <input type="checkbox" name="showMeet" value="Others" />
+                    Others
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="employees">Where did you hear about us?*</label>
+              <select
+                id="where_did_you_hear_about_us"
+                required
+                class="form-control"
+                name="where_did_you_hear_about_us"
+              >
+                <option disabled value="" selected>Please Select</option>
+                <option value="Sales call">Sales call</option>
+                <option value="Email">Email</option>
+                <option value="LinkedIn">LinkedIn</option>
+                <option value="Facebook">Facebook</option>
+                <option value="Twitter">Twitter</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Google">Google</option>
+                <option value="News / Other Websites">
+                  News / Other Websites
+                </option>
+                <option value="Referred by a friend">
+                  Referred by a friend
+                </option>
+                <option value="Whatsapp">Whatsapp</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row pb-3">
+            <label>
+              <input type="checkbox" name="sp_concent" id="sp_concent" />
+              (CONSENT) I provide my consent to organizers to send me latest
+              updates via email/Telegram/Whatsapp with information related to
+              their events and activities.
+            </label>
+          </div>
+
+          <!-- <button class="btn btn-info text-light" onclick="getCountryCode()">
+            Submit
+          </button> -->
+          <button class="px-5 py-2" id="submitButton" disabled style="cursor: not-allowed;border-radius: 10px;background-color: #c2d2ef; color: rgb(103, 103, 103);">
+            Submit
+          </button>
+          <p style="color: red;">Complimentary registrations are currently stopped please contact the mail address for buy your premium passes <a href="">	info@genfinityglobal.com</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center footer text-center">
+      <div class="container p-4">
+        <div class="row text-md-start pt-4">
+          <!--Logo Start-->
+          <div class="col-md-3">
+            <img
+              src="./assets/images/dits.png"
+              alt="img"
+              width="100"
+              class="mb-3"
+            />
+            <p align="justify">
+              Digital Innovation and Transformation Summit is the platform where
+              cutting-edge technology and strategic insights converge to reshape
+              industries. Explore the future of digital innovation, network with
+              thought leaders, and drive your organization's transformation
+              journey forward.
+            </p>
+          </div>
+          <!--Logo end-->
+
+          <!--Solutions Start-->
+          <div class="col-md-3 px-4 pt-4">
+            <h5>Event Location</h5>
+            <div class="d-flex">
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="mx-2">Muscat Sultanate of Oman</p>
+            </div>
+
+            <h5>Follow Us on</h5>
+            <div class="d-flex">
+              <!-- <a href="#"><i class="fa-brands fa-instagram mx-2"></i></a>
+              <a href="#"> <i class="fa-brands fa-square-facebook mx-2"></i></a> -->
+              <a href="#"><i class="fa-brands fa-xl fa-linkedin" style="color: #2c56a0;"></i></i></a>
+            </div>
+          </div>
+          <!--Solutions end-->
+
+          <!--Quick links Start-->
+          <div class="col-md-2 pt-4">
+            <div class="d-flex justify-content-between flex-column">
+              <div class="py-2">
+                <i class="fa-solid fa-angle-right mx-2"></i><a href="#">Home</a>
+              </div>
+              <div class="py-2">
+                <i class="fa-solid fa-angle-right mx-2"></i
+                ><a href="#">Happenings</a>
+              </div>
+              <div class="py-2">
+                <i class="fa-solid fa-angle-right mx-2"></i
+                ><a href="#">Speakers</a>
+              </div>
+              <div class="py-2">
+                <i class="fa-solid fa-angle-right mx-2"></i
+                ><a href="#">Sponsors</a>
+              </div>
+            </div>
+          </div>
+          <!--QUick links end-->
+
+          <!--Other Start-->
+          <div class="col-md-4 pt-4">
+            <h5 class="pb-3">Subscribe Our Newsletter</h5>
+            <input type="text" placeholder="Email" />
+            <button>Subscribe</button>
+            <div
+              style="width: 100%; display: flex; justify-content: space-between; align-items: center;margin-top: 1rem;background-color: rgba(0, 128, 0, 0); flex-direction: column;">
+              <div
+                style="display: flex; justify-content: space-between; align-items: center; height: 40px; width: 100%;padding: 1rem;">
+                <h6 class="mx-auto" style="font-size: 12px">Organized by</h6>
+                <h6 class="mx-auto" style="font-size: 12px">Managed by</h6>
+              </div>
+              <div
+              style="display: flex; justify-content: space-between; align-items: center; height: 40px; width: 80%;padding: 1rem;">
+              <a target="_blank" href="https://genfinityglobal.com/">
+                <img src="./assets/images/logo/logo.png" alt="img" class="img-fluid rounded pt-3 mx-auto" width="100" />
+              </a>
+              <a target="_blank" href="https://www.sahbmedia.com/">
+                <img src="./assets/images/clients/arabic.png" alt="img" class="img-fluid rounded pt-3 mx-auto"
+                  width="120" />
+              </a>
+            </div>
+            </div>
+          </div>
+          <!--Other end-->
+        </div>
+        <p class="copy-right pt-5">
+          Copyright 2023 DitsOman. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- getting the country code  -->
+    <script>
+
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+        // initialCountry: " ", // Set initialCountry as an empty string to prevent default selection
+        // separateDialCode: true, // Ensure the dial code is separate from the number
+      });
+
+      function getCountryCode() {
+        const countryCode = phoneInput.getSelectedCountryData().iso2;
+        console.log(countryCode, 'from html');
+        // sendSpMail(countryCode);
+      }
+
+    </script>
+
+    <script>
+      // function fetchDataAndSort() {
+      //   fetch("https://restcountries.com/v3.1/all")
+      //     .then((response) => response.json())
+      //     .then((data) => {
+      //       // Sort the data alphabetically by country name
+      //       data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+      //       var dropdown = document.getElementById("country");
+      //       var dropdown2 = document.getElementById("country2");
+
+      //       // Loop through the sorted data and populate both dropdowns
+      //       data.forEach((country) => {
+      //         var option = document.createElement("option");
+      //         option.value = country.cca2;
+      //         option.text = country.name.common;
+      //         dropdown.appendChild(option);
+
+      //         var option2 = document.createElement("option");
+      //         option2.value = country.cca2;
+      //         option2.text = country.name.common;
+      //         dropdown2.appendChild(option2);
+      //       });
+      //     })
+      //     .catch((error) => {
+      //       console.error("Error fetching data: ", error);
+      //     });
+      // }
+
+      // // Call the function to fetch and populate both dropdowns
+      // fetchDataAndSort();
+
+      function fetchDataAndSort() {
+        fetch("https://restcountries.com/v3.1/all")
+          .then((response) => response.json())
+          .then((data) => {
+            // Sort the data alphabetically by country name
+            data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+            var dropdown = document.getElementById("sp_country");
+
+            // Loop through the sorted data and populate both dropdowns
+            data.forEach((country) => {
+              var option = document.createElement("option");
+              option.value = country.cca2;
+              option.text = country.name.common;
+              dropdown.appendChild(option);
+            });
+          })
+          .catch((error) => {
+            console.error("Error fetching data: ", error);
+          });
+      }
+
+      // Call the function to fetch and populate both dropdowns
+      fetchDataAndSort();
+    </script>
+
+    <!-- Function used to shrink nav bar removing paddings and adding black background -->
+    <script>
+      $(window).scroll(function () {
+        if ($(document).scrollTop() > 50) {
+          $(".nav").addClass("affix");
+          // console.log("OK");
+        } else {
+          $(".nav").removeClass("affix");
+        }
+      });
+
+      var counted = 0;
+      $(window).scroll(function () {
+        var oTop = $("#counter").offset().top - window.innerHeight;
+        if (counted == 0 && $(window).scrollTop() > oTop) {
+          $(".count").each(function () {
+            var $this = $(this),
+              countTo = $this.attr("data-count");
+            $({
+              countNum: $this.text(),
+            }).animate(
+              {
+                countNum: countTo,
+              },
+
+              {
+                duration: 2000,
+                easing: "swing",
+                step: function () {
+                  $this.text(Math.floor(this.countNum));
+                },
+                complete: function () {
+                  $this.text(this.countNum);
+                  //alert('finished');
+                },
+              }
+            );
+          });
+          counted = 1;
+        }
+      });
+    </script>
+
+    <script src="./assets/bootstrap/js/bootstrap.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.js.map"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js.map"></script>
+  </body>
+</html>
